@@ -1,13 +1,15 @@
-%h1 Welcome to Drumhub
-%p
-  -if @user
-    You are logged in as #{@user} –
-    %a( href="#{url_for :dev_logout}" ) logout
-  -else
-    Sign in
-    %ul
-      -if Rails.env.development?
-        %li=link_to "as a developer", "/auth/developer"
-      %li=link_to "with Twitter", "/auth/twitter"
-      %li=link_to "with Facebok", "/auth/facebook"
-      %li=link_to "with Github", "/auth/github"
+.hello
+  %h1 Welcome to Drumhub
+  %p
+    -if @user
+      You are logged in as #{@user} –
+      %a( href="#{url_for :dev_logout}" ) logout
+    -else
+      Sign in
+      %ul
+        -if Rails.env.development?
+          %li=link_to "as a developer", "/auth/developer"
+        %li=link_to "with Twitter", "/auth/twitter"
+        %li=link_to "with Facebok", "/auth/facebook"
+        %li=link_to "with Github", "/auth/github"
+

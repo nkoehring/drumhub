@@ -11,3 +11,53 @@
  *= require_self
  *= require_tree .
  */
+a {
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #d1dcf7;
+}
+a:visited {
+	text-decoration: none;
+	color: #d1dcf7;
+}
+a:active {
+	text-decoration: none;
+	color: #b8c7d3;
+}
+a:hover {
+	text-decoration: none;
+	color: #b8c7d3;
+}
+
+.hello {
+	margin: 0px 0px 20px 0px;
+	padding: 40px 70px;
+	right:0;
+	left:0;
+	height:500px;
+	background-color: #768ca3
+}
+
+h1 {
+	font-family: Helvetica;
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+p {
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #fff;
+}
+
+ul {
+	list-style:none;
+	display: block;
+	line-height: 140%;
+}
