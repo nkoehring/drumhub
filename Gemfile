@@ -7,10 +7,15 @@ gem 'rails', '3.2.10'
 
 gem 'sqlite3'
 
+# AUTHENTICATION STUFF
 #gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
+
+# TEMPLATING STUFF
+gem 'haml'
+gem 'sass'
 
 # Gems used only for assets and not required
 # in production environments by default.
