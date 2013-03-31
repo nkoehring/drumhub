@@ -1,8 +1,12 @@
 %h1 Welcome to Drumhub
 %p
-  Sign in
-  %ul
-    %li=link_to "as a developer", "/auth/developer"
-    %li=link_to "with Twitter", "/auth/twitter"
-    %li=link_to "with Facebok", "/auth/facebook"
-    %li=link_to "with Github", "/auth/github"
+  -if @user
+    You are logged in as #{@user} –
+    %a( href="#{url_for :dev_logout}" ) logout
+  -else
+    Sign in
+    %ul
+      %li=link_to "as a developer", "/auth/developer"
+      %li=link_to "with Twitter", "/auth/twitter"
+      %li=link_to "with Facebok", "/auth/facebook"
+      %li=link_to "with Github", "/auth/github"

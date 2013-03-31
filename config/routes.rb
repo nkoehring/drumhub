@@ -49,6 +49,8 @@ Drumhub::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'welcome#index'
+  match '/auth/developer/callback' => "welcome#dev_login", :as => "dev_login"
+  match '/auth/developer/logout' => "welcome#dev_logout", :as => "dev_logout"
 
   # See how all your routes lay out with "rake routes"
 
