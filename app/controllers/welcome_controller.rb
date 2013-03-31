@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  before_filter :development_only, :only => [:dev_login, :dev_logout]
+
   def index
     @user = session[:current_user_name]
   end
@@ -17,5 +19,10 @@ class WelcomeController < ApplicationController
     session[:current_user_name] = nil
     session[:current_user_email] = nil
     redirect_to :root, notice: "good bye"
+  end
+
+  protected
+  def development_only
+    head(:bad_request) unless Rails.env.development?
   end
 end
